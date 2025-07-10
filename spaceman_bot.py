@@ -8,14 +8,16 @@ from telegram.ext import (
 )
 from downloader import download_proof
 import os
-
+import pytz
 
 TOKEN = os.getenv('TOKEN')  # Ganti token dari BotFather
 paid_users = set()
 WAITING_PROOF = range(1)
 
+tz = pytz.timezone("Asia/Jakarta")
+
 def predict_result():
-    now = datetime.now()
+    now = datetime.now(tz)
     i = 0
     fib = 1.618
     result = []
