@@ -1,4 +1,3 @@
-# 7839620152:AAFCgWw9CNo9U1kyC9Zt_ATdlE8284NYbP0
 import random
 import hashlib
 from datetime import datetime, timedelta
