@@ -10,7 +10,7 @@ from telegram.ext import (
 from downloader import download_proof
 
 
-TOKEN = '7839620152:AAFCgWw9CNo9U1kyC9Zt_ATdlE8284NYbP0'  # Ganti token dari BotFather
+TOKEN = os.getenv('TOKEN')  # Ganti token dari BotFather
 paid_users = set()
 WAITING_PROOF = range(1)
 
@@ -58,7 +58,7 @@ async def verify(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("📤 Silakan kirim screenshot bukti transfer kamu sekarang.")
     return WAITING_PROOF
 
-ADMIN_ID = 1529842786
+ADMIN_ID = os.getenv('ADMIN_ID')
 
 async def handle_proof(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
