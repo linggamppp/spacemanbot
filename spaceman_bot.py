@@ -7,6 +7,7 @@ from telegram.ext import (
     ContextTypes, ConversationHandler, filters
 )
 from downloader import download_proof
+import os
 
 
 TOKEN = os.getenv('TOKEN')  # Ganti token dari BotFather
